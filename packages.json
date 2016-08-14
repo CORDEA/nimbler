@@ -1,0 +1,13 @@
+[
+  {
+    "name": "oauth",
+    "url": "git@github.com:CORDEA/oauth.git",
+    "method": "git",
+    "tags": [
+      "library"
+    ],
+    "description": "OAuth library for nim",
+    "license": "Apache License 2.0",
+    "web": "http://cordea.github.io/oauth"
+  }
+]
