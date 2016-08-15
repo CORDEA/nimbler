@@ -18,7 +18,7 @@ import json, sequtils
 
 type
     Lib* = object
-        name, url, meth, desc, license, web: string
+        name, url, meth, description, license, web: string
         tags: seq[string]
 
 proc `<>`(node: JsonNode, q: string): string =
@@ -42,7 +42,7 @@ proc toLib*(node: JsonNode): Lib =
         name: node<>"name",
         url: node<>"url",
         meth: node<>"method",
-        desc: node<>"description",
+        description: node<>"description",
         license: node<>"license",
         web: node<>"web",
         tags: sq
