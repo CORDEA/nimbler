@@ -153,9 +153,11 @@ proc registerRepo(repo: string): bool =
     else:
         defer: readf.close()
         for line in readf.readAll().splitLines:
-            if line.split("\t")[0] == repo:
-                echo repo & " already exists."
-                quit 0
+            let lns = line.split("\t")
+            if len(lns) == 2:
+                if lns[0] == repo:
+                    echo repo & " already exists."
+                    quit 0
 
     let sr = searchDbFile(repos)
     for r in sr:
